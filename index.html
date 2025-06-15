@@ -10,24 +10,78 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
   <body>
-    <div class="container">
+    <main class="container">
+      <!-- Top Navigation -->
       <header class="container-header">
         <h1 class="container-title">devfinder</h1>
-        <button class="dark-mode">Dark</button>
+        <button class="dark-mode" aria-label="Toggle Dark Mode">Dark</button>
       </header>
-      <input class="search-area" type="text" />
+
+      <!-- Search Form -->
+      <form class="search-form" role="search">
+        <label for="search" class="visually-hidden"
+          >Search GitHub username</label
+        >
+        <input
+          class="search-area"
+          type="text"
+          id="search"
+          name="username"
+          placeholder="Search GitHub username..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <!-- GitHub User Profile -->
       <article class="main-area">
-        <header class="main-area-header"></header>
-        <section>
-          <div class="number-info"></div>
-          <div class="another-info"></div>
-          <div></div>
+        <!-- Profile Header -->
+        <header class="main-area-header">
+          <img src="avatar_url.png" alt="The Octocat's profile picture" />
+          <div>
+            <h2>The Octocat</h2>
+            <p>@octocat</p>
+            <time datetime="2011-01-25">Joined 25 Jan 2011</time>
+          </div>
+        </header>
+
+        <!-- Bio -->
+        <p class="user-bio">This profile has no bio</p>
+
+        <!-- Repo / Follower Stats -->
+        <section class="number-info" aria-label="GitHub Statistics">
+          <dl>
+            <div>
+              <dt>Repos</dt>
+              <dd>8</dd>
+            </div>
+            <div>
+              <dt>Followers</dt>
+              <dd>3938</dd>
+            </div>
+            <div>
+              <dt>Following</dt>
+              <dd>9</dd>
+            </div>
+          </dl>
         </section>
+
+        <!-- Additional Info -->
+        <aside class="another-info" aria-label="User Additional Info">
+          <ul>
+            <li><span aria-hidden="true">📍</span> San Francisco</li>
+            <li><span aria-hidden="true">🐦</span> Not Available</li>
+            <li>
+              <span aria-hidden="true">🔗</span>
+              <a href="https://github.blog">https://github.blog</a>
+            </li>
+            <li><span aria-hidden="true">🏢</span> @github</li>
+          </ul>
+        </aside>
       </article>
-    </div>
+    </main>
   </body>
 </html>
