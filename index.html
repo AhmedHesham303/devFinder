@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="icon"
@@ -13,75 +18,122 @@
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
   <body>
-    <main class="container">
-      <!-- Top Navigation -->
-      <header class="container-header">
-        <h1 class="container-title">devfinder</h1>
-        <button class="dark-mode" aria-label="Toggle Dark Mode">Dark</button>
-      </header>
-
-      <!-- Search Form -->
-      <form class="search-form" role="search">
-        <label for="search" class="visually-hidden"
-          >Search GitHub username</label
-        >
-        <input
-          class="search-area"
-          type="text"
-          id="search"
-          name="username"
-          placeholder="Search GitHub username..."
-          required
-        />
-        <button type="submit">Search</button>
-      </form>
-
-      <!-- GitHub User Profile -->
-      <article class="main-area">
-        <!-- Profile Header -->
-        <header class="main-area-header">
-          <img src="avatar_url.png" alt="The Octocat's profile picture" />
-          <div>
-            <h2>The Octocat</h2>
-            <p>@octocat</p>
-            <time datetime="2011-01-25">Joined 25 Jan 2011</time>
+    <div class="big-container">
+      <main class="small-container">
+        <!-- Top Navigation -->
+        <header class="container-header">
+          <h1 class="container-title">devfinder</h1>
+          <div class="dark-mode" aria-label="Toggle Dark Mode">
+            <button class="dark-mode-text">Dark</button>
+            <div class="dark-mode-icon">
+              <img src="./assets/icon-moon.svg" alt="dark-mode-icon" />
+            </div>
           </div>
         </header>
 
-        <!-- Bio -->
-        <p class="user-bio">This profile has no bio</p>
+        <!-- Search Form -->
+        <form class="search-form" role="search">
+          <div class="search-input">
+            <img
+              src="./assets/icon-search.svg"
+              alt="search-icon"
+              class="search-icon"
+            />
+            <input
+              class="search-area"
+              type="text"
+              id="search"
+              name="username"
+              placeholder="Search GitHub username..."
+              required
+            />
+          </div>
+          <button class="submit-search" type="submit">Search</button>
+        </form>
 
-        <!-- Repo / Follower Stats -->
-        <section class="number-info" aria-label="GitHub Statistics">
-          <dl>
-            <div>
-              <dt>Repos</dt>
-              <dd>8</dd>
-            </div>
-            <div>
-              <dt>Followers</dt>
-              <dd>3938</dd>
-            </div>
-            <div>
-              <dt>Following</dt>
-              <dd>9</dd>
-            </div>
-          </dl>
-        </section>
+        <!-- GitHub User Profile -->
+        <article class="main-area">
+          <!-- Profile Header -->
+          <header class="main-area-header">
+            <img
+              class="acount-img"
+              src="./assets/Profile Picture.png"
+              alt="The Octocat's profile picture"
+            />
+            <div class="acount-name-info">
+              <div>
+                <h2 class="acount-name">The Octocat</h2>
+                <p class="acount">@octocat</p>
+              </div>
 
-        <!-- Additional Info -->
-        <aside class="another-info" aria-label="User Additional Info">
-          <ul>
-            <li><span aria-hidden="true">📍</span> San Francisco</li>
-            <li><span aria-hidden="true">🐦</span> Not Available</li>
-            <li>
-              <span aria-hidden="true">🔗</span>
-              <a href="https://github.blog">https://github.blog</a>
-            </li>
-            <li><span aria-hidden="true">🏢</span> @github</li>
-          </ul>
-        </aside>
-      </article>
-    </main>
+              <time class="joining-date" datetime="2011-01-25"
+                >Joined 25 Jan 2011</time
+              >
+            </div>
+          </header>
+
+          <!-- Bio -->
+          <section class="profile-info">
+            <p class="user-bio">This profile has no bio</p>
+
+            <!-- Repo / Follower Stats -->
+            <section class="number-info" aria-label="GitHub Statistics">
+              <dl>
+                <div>
+                  <dt>Repos</dt>
+                  <dd>8</dd>
+                </div>
+                <div>
+                  <dt>Followers</dt>
+                  <dd>3938</dd>
+                </div>
+                <div>
+                  <dt>Following</dt>
+                  <dd>9</dd>
+                </div>
+              </dl>
+            </section>
+
+            <!-- Additional Info -->
+            <aside class="another-info" aria-label="User Additional Info">
+              <ul class="another-info-list">
+                <li>
+                  <img
+                    class="location-icon"
+                    src="./assets/icon-location.svg"
+                    alt=""
+                  />
+                  <span class="lacation">San Francisco</span>
+                </li>
+                <li>
+                  <img
+                    class="twitter-icon"
+                    src="./assets/icon-twitter.svg"
+                    alt=""
+                  />
+                  <span class="twitter">Not Avilable</span>
+                </li>
+                <li>
+                  <img
+                    class="website-icon"
+                    src="./assets/icon-website.svg"
+                    alt=""
+                  />
+                  <span class="githup">https://githup.blog</span>
+                </li>
+                <li>
+                  <img
+                    class="company-icon"
+                    src="./assets/icon-company.svg"
+                    alt=""
+                  />
+                  <span class="comapny">@githup</span>
+                </li>
+              </ul>
+            </aside>
+          </section>
+        </article>
+      </main>
+    </div>
   </body>
 </html>
