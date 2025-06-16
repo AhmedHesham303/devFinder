@@ -20,8 +20,7 @@ body {
 }
 
 .big-container {
-  width: 73rem;
-  height: 57rem;
+  width: 80rem;
   box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
   /* box-shadow: inset 0 0 0 1px black; */
 }
@@ -89,7 +88,14 @@ body {
 }
 
 .search-area {
+  font-size: 1.8rem;
+  width: 40rem;
   border: none;
+  background-color: white; /* ✅ ensures it’s always white */
+  color: #141d2f;
+  outline: none; /* ✅ removes default orange outline */
+  padding: 1rem; /* optional: better spacing */
+  border-radius: 0.8rem; /* optional: if you want rounded edges */
 }
 
 .submit-search {
@@ -106,11 +112,9 @@ body {
   display: flex;
   flex-direction: column;
   padding: 4.8rem;
-  padding-bottom: 0;
   background-color: white;
   border-radius: 1.5rem;
   box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.1986);
-  height: 40rem;
 }
 
 .main-area-header {
@@ -119,6 +123,9 @@ body {
 
 .acount-img {
   margin-right: 3.2rem;
+  width: 11.7rem;
+  height: 11.7rem;
+  border-radius: 50%;
 }
 
 .acount-name {
@@ -179,8 +186,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 1.6rem;
+  column-gap: 2rem;
   font-size: 1.5rem;
   color: #4b6a9b;
+  word-break: break-word;
 }
 
 li {
