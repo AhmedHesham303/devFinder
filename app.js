@@ -4,6 +4,8 @@ const input = document.querySelector(".search-area");
 
 const containerEl = document.querySelector(".main-area");
 const errMess = document.querySelector(".error-mes");
+const darkModeBtn = document.querySelector(".dark-mode-text");
+const darkModeIcon = document.querySelector(".dark-mode-img");
 function handelSearch() {
   searchBtn.addEventListener("click", async (event) => {
     event.preventDefault();
@@ -17,11 +19,10 @@ function handelSearch() {
       <p class = "error-text">We couldn’t find any GitHub users matching your search. Please double-check the username and try again.</p>
       `;
       containerEl.innerHTML = html;
-      console.log(errMess);
-      errMess.style.display = "block";
+      errMess.classList.remove("hidden");
       return;
     }
-    errMess.style.display = "none";
+    errMess.classList.add("hidden");
 
     const avatarUrl = user.avatar_url;
     const name = user.name;
@@ -173,6 +174,22 @@ function handelSearch() {
   });
 }
 
+function handleDarkMode() {
+  darkModeBtn.addEventListener("click", () => {
+    const body = document.body;
+
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+      darkModeBtn.innerHTML = "LIGHT";
+      darkModeIcon.src = "./assets/icon-sun.svg";
+    } else {
+      darkModeBtn.innerHTML = "DARK";
+      darkModeIcon.src = "./assets/icon-moon.svg";
+    }
+  });
+}
+
 async function loadUser(username) {
   try {
     const response = await fetch(`https://api.github.com/users/${username}`);
@@ -182,4 +199,6 @@ async function loadUser(username) {
     console.log(err);
   }
 }
+
 handelSearch();
+handleDarkMode();

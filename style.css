@@ -239,11 +239,64 @@ li img {
   position: relative;
 }
 .error-mes {
-  display: none;
   color: #f74646;
   font-size: 1.6rem;
   position: absolute;
   bottom: 2rem;
   right: 14rem;
   white-space: nowrap;
+}
+.hidden {
+  display: none;
+}
+
+.search-form,
+.main-area,
+.search-area {
+  background-color: white;
+  color: #141d2f;
+}
+
+/* 🌙 Dark mode overrides */
+body.dark {
+  background-color: #141d2f;
+  color: white;
+}
+
+body.dark .search-form,
+body.dark .main-area,
+body.dark .search-area {
+  background-color: #1e2a47;
+  color: white;
+}
+
+body.dark .acount {
+  color: #60abff;
+}
+
+body.dark .joining-date,
+body.dark .user-bio,
+body.dark .container-title,
+body.dark .githup,
+body.dark .search-area::placeholder,
+body.dark .search-area,
+body.dark .number-info dt,
+body.dark .number-info dl,
+body.dark li,
+body.dark .error-header,
+body.dark .dark-mode-text:hover {
+  color: #fff;
+}
+
+body.dark .error-text {
+  color: #90a4d4;
+}
+
+body.dark .number-info {
+  background-color: #141d2f;
+}
+
+body.dark .dark-mode-text {
+  background-color: transparent;
+  color: #90a4d4;
 }
