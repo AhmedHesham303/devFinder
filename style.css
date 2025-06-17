@@ -18,13 +18,7 @@ body {
   color: #141d2f;
   font-family: "Space Mono", monospace;
 }
-/* button:focus-visible {
-  outline: none;
-  border: 2px solid #0079ff;
-}
-a:focus-visible {
-  border: 2px solid #0079ff;
-} */
+
 .big-container {
   width: 80rem;
   box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
@@ -299,4 +293,77 @@ body.dark .number-info {
 body.dark .dark-mode-text {
   background-color: transparent;
   color: #90a4d4;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 40%;
+  }
+  .dark-mode-img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 30%;
+  }
+  .dark-mode-img {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 17%;
+  }
+  .acount-name {
+    font-size: 2rem;
+  }
+  .joining-date {
+    font-size: 1.4rem;
+  }
+  .dark-mode-img {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .big-container {
+    width: 40rem;
+  }
+  .search-area {
+    width: 20rem;
+  }
+  .profile-info {
+    margin-left: 0;
+  }
+
+  .user-bio {
+    margin-top: 2rem;
+  }
+  .number-info {
+    margin-bottom: 4rem;
+  }
+  dl {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  li img {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .another-info-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .acount-name-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
 }
