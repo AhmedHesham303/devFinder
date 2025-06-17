@@ -18,7 +18,13 @@ body {
   color: #141d2f;
   font-family: "Space Mono", monospace;
 }
-
+/* button:focus-visible {
+  outline: none;
+  border: 2px solid #0079ff;
+}
+a:focus-visible {
+  border: 2px solid #0079ff;
+} */
 .big-container {
   width: 80rem;
   box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
@@ -53,6 +59,7 @@ body {
 .dark-mode-text:hover,
 .dark-mode-icon:hover {
   cursor: pointer;
+  color: #2b3442;
 }
 
 .dark-mode-icon {
@@ -91,11 +98,11 @@ body {
   font-size: 1.8rem;
   width: 40rem;
   border: none;
-  background-color: white; /* ✅ ensures it’s always white */
+  background-color: white;
   color: #141d2f;
-  outline: none; /* ✅ removes default orange outline */
-  padding: 1rem; /* optional: better spacing */
-  border-radius: 0.8rem; /* optional: if you want rounded edges */
+  outline: none;
+  padding: 1rem;
+  border-radius: 0.8rem;
 }
 
 .submit-search {
@@ -106,6 +113,11 @@ body {
   border-radius: 1rem;
   font-size: 1.6rem;
   font-weight: bold;
+}
+
+.submit-search:hover {
+  cursor: pointer;
+  background-color: #60abff;
 }
 
 .main-area {
@@ -201,4 +213,37 @@ li {
 
 li img {
   color: #141d2f;
+}
+
+.githup {
+  text-decoration: none;
+  color: #4b6a9b;
+}
+
+.githup:hover {
+  text-decoration: underline;
+}
+
+.error-header {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2b3442;
+  margin-bottom: 2rem;
+}
+
+.error-text {
+  color: #697c9a;
+  font-size: 1.5rem;
+}
+.search-form {
+  position: relative;
+}
+.error-mes {
+  display: none;
+  color: #f74646;
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 14rem;
+  white-space: nowrap;
 }
